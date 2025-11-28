@@ -18,8 +18,8 @@
       </Option>
       <Option type="QString" value="Buffer" name="component_description"/>
       <Option type="double" value="30" name="component_height"/>
-      <Option type="double" value="993" name="component_pos_x"/>
-      <Option type="double" value="539" name="component_pos_y"/>
+      <Option type="double" value="1485" name="component_pos_x"/>
+      <Option type="double" value="563" name="component_pos_y"/>
       <Option type="double" value="200" name="component_width"/>
       <Option name="dependencies"/>
       <Option type="QString" value="native:buffer_1" name="id"/>
@@ -47,8 +47,8 @@
         </Option>
         <Option type="List" name="INPUT">
           <Option type="Map">
-            <Option type="QString" value="native:removeduplicatevertices_1" name="child_id"/>
-            <Option type="QString" value="OUTPUT" name="output_name"/>
+            <Option type="QString" value="qgis:checkvalidity_2" name="child_id"/>
+            <Option type="QString" value="VALID_OUTPUT" name="output_name"/>
             <Option type="int" value="1" name="source"/>
           </Option>
         </Option>
@@ -95,8 +95,8 @@
       </Option>
       <Option type="QString" value="Elimina geometrie duplicate" name="component_description"/>
       <Option type="double" value="30" name="component_height"/>
-      <Option type="double" value="524" name="component_pos_x"/>
-      <Option type="double" value="315" name="component_pos_y"/>
+      <Option type="double" value="731" name="component_pos_x"/>
+      <Option type="double" value="141" name="component_pos_y"/>
       <Option type="double" value="200" name="component_width"/>
       <Option name="dependencies"/>
       <Option type="QString" value="native:deleteduplicategeometries_1" name="id"/>
@@ -130,8 +130,8 @@
       </Option>
       <Option type="QString" value="Estrai tramite espressione" name="component_description"/>
       <Option type="double" value="30" name="component_height"/>
-      <Option type="double" value="204" name="component_pos_x"/>
-      <Option type="double" value="688" name="component_pos_y"/>
+      <Option type="double" value="1462" name="component_pos_x"/>
+      <Option type="double" value="693" name="component_pos_y"/>
       <Option type="double" value="200" name="component_width"/>
       <Option name="dependencies"/>
       <Option type="QString" value="native:extractbyexpression_1" name="id"/>
@@ -171,8 +171,8 @@
       </Option>
       <Option type="QString" value="Estrai per posizione" name="component_description"/>
       <Option type="double" value="30" name="component_height"/>
-      <Option type="double" value="732" name="component_pos_x"/>
-      <Option type="double" value="752" name="component_pos_y"/>
+      <Option type="double" value="461" name="component_pos_x"/>
+      <Option type="double" value="402" name="component_pos_y"/>
       <Option type="double" value="200" name="component_width"/>
       <Option name="dependencies"/>
       <Option type="QString" value="native:extractbylocation_1" name="id"/>
@@ -182,8 +182,8 @@
       <Option type="Map" name="params">
         <Option type="List" name="INPUT">
           <Option type="Map">
-            <Option type="QString" value="native:removeduplicatevertices_1" name="child_id"/>
-            <Option type="QString" value="OUTPUT" name="output_name"/>
+            <Option type="QString" value="qgis:checkvalidity_2" name="child_id"/>
+            <Option type="QString" value="VALID_OUTPUT" name="output_name"/>
             <Option type="int" value="1" name="source"/>
           </Option>
         </Option>
@@ -261,8 +261,8 @@
       </Option>
       <Option type="QString" value="Rimuovi i vertici duplicati" name="component_description"/>
       <Option type="double" value="30" name="component_height"/>
-      <Option type="double" value="773" name="component_pos_x"/>
-      <Option type="double" value="439" name="component_pos_y"/>
+      <Option type="double" value="1128" name="component_pos_x"/>
+      <Option type="double" value="149" name="component_pos_y"/>
       <Option type="double" value="200" name="component_width"/>
       <Option name="dependencies"/>
       <Option type="QString" value="native:removeduplicatevertices_1" name="id"/>
@@ -300,16 +300,16 @@
         <Option type="QString" value="" name="color"/>
         <Option type="QString" value="" name="component_description"/>
         <Option type="double" value="60" name="component_height"/>
-        <Option type="double" value="1413" name="component_pos_x"/>
-        <Option type="double" value="807" name="component_pos_y"/>
+        <Option type="double" value="1905" name="component_pos_x"/>
+        <Option type="double" value="748" name="component_pos_y"/>
         <Option type="double" value="100" name="component_width"/>
         <Option type="bool" value="true" name="outputs_collapsed"/>
         <Option type="bool" value="true" name="parameters_collapsed"/>
       </Option>
       <Option type="QString" value="Controlla validità" name="component_description"/>
       <Option type="double" value="30" name="component_height"/>
-      <Option type="double" value="1039" name="component_pos_x"/>
-      <Option type="double" value="691" name="component_pos_y"/>
+      <Option type="double" value="495" name="component_pos_x"/>
+      <Option type="double" value="584" name="component_pos_y"/>
       <Option type="double" value="200" name="component_width"/>
       <Option name="dependencies"/>
       <Option type="QString" value="qgis:checkvalidity_1" name="id"/>
@@ -329,8 +329,8 @@
           </Option>
           <Option type="QString" value="output" name="component_description"/>
           <Option type="double" value="30" name="component_height"/>
-          <Option type="double" value="0" name="component_pos_x"/>
-          <Option type="double" value="0" name="component_pos_y"/>
+          <Option type="double" value="605" name="component_pos_x"/>
+          <Option type="double" value="685" name="component_pos_y"/>
           <Option type="double" value="200" name="component_width"/>
           <Option type="invalid" name="default_value"/>
           <Option type="bool" value="false" name="mandatory"/>
@@ -352,6 +352,53 @@
         <Option type="List" name="INPUT_LAYER">
           <Option type="Map">
             <Option type="QString" value="native:extractbylocation_1" name="child_id"/>
+            <Option type="QString" value="OUTPUT" name="output_name"/>
+            <Option type="int" value="1" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="METHOD">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="int" value="2" name="static_value"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="qgis:checkvalidity_2">
+      <Option type="bool" value="true" name="active"/>
+      <Option name="alg_config"/>
+      <Option type="QString" value="qgis:checkvalidity" name="alg_id"/>
+      <Option type="QString" value="" name="color"/>
+      <Option type="Map" name="comment">
+        <Option type="QString" value="" name="color"/>
+        <Option type="QString" value="" name="component_description"/>
+        <Option type="double" value="60" name="component_height"/>
+        <Option type="double" value="1459" name="component_pos_x"/>
+        <Option type="double" value="807" name="component_pos_y"/>
+        <Option type="double" value="100" name="component_width"/>
+        <Option type="bool" value="true" name="outputs_collapsed"/>
+        <Option type="bool" value="true" name="parameters_collapsed"/>
+      </Option>
+      <Option type="QString" value="Controlla validità" name="component_description"/>
+      <Option type="double" value="30" name="component_height"/>
+      <Option type="double" value="1365" name="component_pos_x"/>
+      <Option type="double" value="297" name="component_pos_y"/>
+      <Option type="double" value="200" name="component_width"/>
+      <Option name="dependencies"/>
+      <Option type="QString" value="qgis:checkvalidity_2" name="id"/>
+      <Option name="outputs"/>
+      <Option type="bool" value="false" name="outputs_collapsed"/>
+      <Option type="bool" value="true" name="parameters_collapsed"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="IGNORE_RING_SELF_INTERSECTION">
+          <Option type="Map">
+            <Option type="int" value="2" name="source"/>
+            <Option type="bool" value="false" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="INPUT_LAYER">
+          <Option type="Map">
+            <Option type="QString" value="native:removeduplicatevertices_1" name="child_id"/>
             <Option type="QString" value="OUTPUT" name="output_name"/>
             <Option type="int" value="1" name="source"/>
           </Option>
