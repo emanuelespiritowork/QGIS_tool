@@ -22,7 +22,7 @@ class Pulizia_vettore(QgsProcessingAlgorithm):
     def processAlgorithm(self, parameters, context, model_feedback):
         # Use a multi-step feedback, so that individual child algorithm progress reports are adjusted for the
         # overall progress through the model
-        feedback = QgsProcessingMultiStepFeedback(8, model_feedback)
+        feedback = QgsProcessingMultiStepFeedback(10, model_feedback)
         results = {}
         outputs = {}
 
@@ -123,6 +123,32 @@ class Pulizia_vettore(QgsProcessingAlgorithm):
             'IGNORE_RING_SELF_INTERSECTION': False,
             'INPUT_LAYER': outputs['EstraiPerPosizione']['OUTPUT'],
             'METHOD': 2,  # GEOS
+            'VALID_OUTPUT': QgsProcessing.TEMPORARY_OUTPUT
+        }
+        outputs['ControllaValidit'] = processing.run('qgis:checkvalidity', alg_params, context=context, feedback=feedback, is_child_algorithm=True)
+
+        feedback.setCurrentStep(8)
+        if feedback.isCanceled():
+            return {}
+
+        # Controlla validità
+        alg_params = {
+            'IGNORE_RING_SELF_INTERSECTION': False,
+            'INPUT_LAYER': outputs['ControllaValidit']['VALID_OUTPUT'],
+            'METHOD': 1,  # QGIS
+            'VALID_OUTPUT': QgsProcessing.TEMPORARY_OUTPUT
+        }
+        outputs['ControllaValidit'] = processing.run('qgis:checkvalidity', alg_params, context=context, feedback=feedback, is_child_algorithm=True)
+
+        feedback.setCurrentStep(9)
+        if feedback.isCanceled():
+            return {}
+
+        # Controlla validità
+        alg_params = {
+            'IGNORE_RING_SELF_INTERSECTION': False,
+            'INPUT_LAYER': outputs['ControllaValidit']['VALID_OUTPUT'],
+            'METHOD': 0,  # Selezionato nelle impostazioni di digitalizzazione
             'VALID_OUTPUT': parameters['Output']
         }
         outputs['ControllaValidit'] = processing.run('qgis:checkvalidity', alg_params, context=context, feedback=feedback, is_child_algorithm=True)
